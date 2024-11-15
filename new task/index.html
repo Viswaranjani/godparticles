@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Sale</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Logo in Top Right -->
+    <div class="absolute top-0 right-0 p-10">
+        <img src="logo1.png" alt="Logo" class="h-30">
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section relative">
+        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="hero-content text-center text-white relative z-10 py-16 px-6">
+            <h1 class="hero-title text-4xl font-bold mb-4">Up to 50% Off - Summer Collection!</h1>
+            <p class="hero-subtitle text-xl mb-6">Don’t miss out on our exclusive deals!</p>
+            <div class="countdown-timer text-lg" id="countdown">Time left: 00:00:00</div>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section class="py-12 px-6 featured-products-section bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-600">Featured Products</h2>
+        <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Product Cards -->
+            <div class="product-card bg-white shadow-lg rounded-lg hover:shadow-xl transition-all">
+                <img src="camera.jpeg" alt="Product 1" class="product-image rounded-t-lg w-full">
+                <div class="p-4">
+                    <h3 class="product-name text-lg font-semibold">Camera</h3>
+                    <p class="product-price text-xl text-gray-800">$2500</p>
+                    <p class="product-description text-sm text-gray-600">Capture stunning photos with crisp details and
+                        vibrant colors</p>
+                </div>
+            </div>
+            <div class="product-card bg-white shadow-lg rounded-lg hover:shadow-xl transition-all">
+                <img src="camera2.jpeg" alt="Product 2" class="product-image rounded-t-lg w-full">
+                <div class="p-4">
+                    <h3 class="product-name text-lg font-semibold">Digital Camera</h3>
+                    <p class="product-price text-xl text-gray-800">$3000</p>
+                    <p class="product-description text-sm text-gray-600">Take your photography to the next level with
+                        this high-performance camera.</p>
+                </div>
+            </div>
+            <div class="product-card bg-white shadow-lg rounded-lg hover:shadow-xl transition-all">
+                <img src="mobile.jpeg" alt="Product 3" class="product-image rounded-t-lg w-full">
+                <div class="p-4">
+                    <h3 class="product-name text-lg font-semibold">One Plus Mobile</h3>
+                    <p class="product-price text-xl text-gray-800">$4000</p>
+                    <p class="product-description text-sm text-gray-600">Designed for gamers, this phone delivers
+                        lag-free performance.</p>
+                </div>
+            </div>
+            <div class="product-card bg-white shadow-lg rounded-lg hover:shadow-xl transition-all">
+                <img src="watch.jpeg" alt="Product 4" class="product-image rounded-t-lg w-full">
+                <div class="p-4">
+                    <h3 class="product-name text-lg font-semibold">Watch</h3>
+                    <p class="product-price text-xl text-gray-800">$2500</p>
+                    <p class="product-description text-sm text-gray-600">A stylish, minimalist watch that pairs
+                        effortlessly with any outfit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Categories Section -->
+    <section class="py-12 px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop by Category</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Category Cards -->
+            <div class="category-card relative rounded-lg overflow-hidden">
+                <img src="cameras.jpeg" alt="Category 1" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 bg-black opacity-50"></div>
+                <div class="category-text absolute bottom-0 left-0 p-4 text-white font-semibold">Category 1</div>
+            </div>
+            <div class="category-card relative rounded-lg overflow-hidden">
+                <img src="laptops.jpeg" alt="Category 2" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 bg-black opacity-50"></div>
+                <div class="category-text absolute bottom-0 left-0 p-4 text-white font-semibold">Category 2</div>
+            </div>
+            <div class="category-card relative rounded-lg overflow-hidden">
+                <img src="phones.jpeg" alt="Category 3" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 bg-black opacity-50"></div>
+                <div class="category-text absolute bottom-0 left-0 p-4 text-white font-semibold">Category 3</div>
+            </div>
+            <div class="category-card relative rounded-lg overflow-hidden">
+                <img src="watches.jpeg" alt="Category 4" class="w-full h-full object-cover">
+                <div class="category-overlay absolute inset-0 bg-black opacity-50"></div>
+                <div class="category-text absolute bottom-0 left-0 p-4 text-white font-semibold">Category 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-12 px-6 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Testimonial Card -->
+            <div class="testimonial-card bg-white shadow-lg rounded-lg p-6">
+                <p class="testimonial-text text-lg italic">"Amazing quality and fast delivery! Love the summer
+                    collection!"</p>
+                <div class="testimonial-author text-sm text-right font-semibold">- Jane Doe</div>
+            </div>
+            <div class="testimonial-card bg-white shadow-lg rounded-lg p-6">
+                <p class="testimonial-text text-lg italic">"The products are even better than I imagined. Great value for money and excellent customer service. Highly recommend!"</p>
+                <div class="testimonial-author text-sm text-right font-semibold">- John</div>
+            </div>
+            <div class="testimonial-card bg-white shadow-lg rounded-lg p-6">
+                <p class="testimonial-text text-lg italic">"Fast delivery and the items were exactly as described. The summer collection has so many amazing pieces. Very happy with my purchase!</p>
+                <div class="testimonial-author text-sm text-right font-semibold">- David</div>
+            </div>
+            <div class="testimonial-card bg-white shadow-lg rounded-lg p-6">
+                <p class="testimonial-text text-lg italic">"Absolutely love the summer collection! The quality is top-notch and the delivery was faster than expected.</p>
+                <div class="testimonial-author text-sm text-right font-semibold">- Pricilla</div>
+            </div>
+        </div>
+    </section>
+
+<!-- Newsletter Subscription Form -->
+<section class="py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Stay Updated</h2>
+    <div class="subscription-form">
+        <form>
+            <!-- User Name Field -->
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your full name" required>
+
+            <!-- User Email Field -->
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" class="form-input" placeholder="Your email address" required>
+
+            <!-- User Phone Number Field -->
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" class="form-input" placeholder="Your phone number" required>
+
+            <!-- User Address Field -->
+            <label for="address" class="form-label">Shipping Address</label>
+            <textarea id="address" class="form-input" placeholder="Your shipping address" rows="4" required></textarea>
+
+            <!-- Subscription Button -->
+            <button type="submit" class="form-button">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
